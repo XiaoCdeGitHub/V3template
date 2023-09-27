@@ -18,7 +18,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    
+
   },
   "files": [],
   "references": [
@@ -34,9 +34,9 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "src/auto-imports.d.ts", // 导入上一步生成的配置文件
+    "src/types/auto-imports.d.ts", // 导入上一步生成的配置文件
     "vite.config.ts"
-    
+
   ],
   "exclude": ["node_modules", "dist", "**/*.js"]
 }

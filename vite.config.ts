@@ -32,7 +32,7 @@ export default defineConfig({
         }),
       ],
       imports: ['vue', 'vue-router', 'pinia'],
-      dts: path.resolve('./src', 'auto-imports.d.ts'),
+      dts: path.resolve('/src/types', 'auto-imports.d.ts'),
       eslintrc: {
         enabled: true, // Default `false`
         filepath: './config/eslint/.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
@@ -47,7 +47,7 @@ export default defineConfig({
           enabledCollections: ['ep'],
         }),
       ],
-      dts: path.resolve('./src', 'components.d.ts'),
+      dts: path.resolve('./src/types', 'components.d.ts'),
     }),
     Icons({
       autoInstall: true,
