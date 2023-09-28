@@ -34,7 +34,10 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "src/types/auto-imports.d.ts", // 导入上一步生成的配置文件
+    "src/types/**/*.d.ts",
+    "src/types/**/*.ts",
+    "build/**/*.ts",
+    "build/**/*.d.ts",
     "vite.config.ts"
 
   ],
