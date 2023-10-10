@@ -12,7 +12,8 @@
     "lint:prettier": "prettier --write **/*.{js,json,tsx,css,less,scss,vue,html,md}",
     "lint:stylelint": "stylelint --ignore-path ./config/stylelint/.stylelintignore --config ./config/stylelint/.stylelint.config.js {src}**/*.{css,less,scss,vue,html} --fix",
     "lint:lint-staged": "lint-staged -c ./config/lint-staged/lint-staged.config.js",
-    "commit": "git add . && pnpm lint:lint-staged && git cz",
+    "commit": "git add . && pnpm lint:lint-staged && cz",
+    "cz": "git czg",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -26,7 +27,6 @@
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
     "@eslint/create-config": "^0.4.6",
     "@iconify-json/ep": "^1.1.12",
     "@iconify/json": "^2.2.116",
@@ -36,9 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@vitejs/plugin-vue": "^4.3.1",
     "@vue/tsconfig": "^0.4.0",
-    "commitlint-config-cz": "^0.13.3",
-    "commitlint-config-git-commit-emoji": "^1.0.0",
-    "cz-customizable": "^7.0.0",
+    "cz-git": "^1.7.1",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
@@ -67,10 +65,8 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-customizable"
-    },
-    "cz-customizable": {
-      "config": "./config/cz-customizable/.cz-config.js"
+      "path": "./node_modules/cz-git",
+      "czConfig": "./config/cz-git/cz.config.js"
     }
   }
 }
