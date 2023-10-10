@@ -17,12 +17,9 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
-    "@tinymce/tinymce-vue": "^5",
     "axios": "^1.5.0",
     "element-plus": "^2.3.12",
-    "js-sha3": "^0.9.1",
     "pinia": "^2.1.6",
-    "tinymce": "^6.7.0",
     "unplugin-icons": "^0.17.0",
     "vite-plugin-inspect": "^0.7.38",
     "vue": "^3.3.4",

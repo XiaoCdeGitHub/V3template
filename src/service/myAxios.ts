@@ -43,7 +43,6 @@ class RequestHttp {
   public constructor(config: AxiosRequestConfig) {
     // 实例化axios
     this.service = axios.create(config);
-
     /**
      * 请求拦截器
      * 客户端发送请求 -> [请求拦截器] -> 服务器
@@ -115,16 +114,16 @@ class RequestHttp {
   }
 
   // 常用方法封装
-  get<T>(url: string, params?: object): Promise<ResultData<T>> {
+  get<T, V>(url: string, params?: V): Promise<ResultData<T>> {
     return this.service.get(url, { params });
   }
-  post<T>(url: string, params?: object): Promise<ResultData<T>> {
+  post<T, D>(url: string, params?: D): Promise<ResultData<T>> {
     return this.service.post(url, params);
   }
-  put<T>(url: string, params?: object): Promise<ResultData<T>> {
+  put<T, D>(url: string, params?: D): Promise<ResultData<T>> {
     return this.service.put(url, params);
   }
-  delete<T>(url: string, params?: object): Promise<ResultData<T>> {
+  delete<T, D>(url: string, params?: D): Promise<ResultData<T>> {
     return this.service.delete(url, { params });
   }
 }
