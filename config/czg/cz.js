@@ -1,5 +1,5 @@
-// cz.config.js
-/** @type {import('cz-git').CommitizenGitOptions} */
+// config/cz.js
+/** @type {import('czg').CommitizenGitOptions} */
 module.exports = {
   alias: { fd: 'docs: fix typos' },
   messages: {

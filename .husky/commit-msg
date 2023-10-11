@@ -1,5 +1,4 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-# npx --no-install czg --config ./config/czg/czg-config.js --edit
-
+exec < /dev/tty && npx czg --hook || true
