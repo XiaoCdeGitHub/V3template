@@ -1,5 +1,5 @@
 {
-  "name": "yeeztech-web-admin",
+  "name": "V3TEMPLATE",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -66,8 +66,8 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-git",
-      "czConfig": "./config/cz-git/cz.config.js"
+      "path": "node_modules/cz-git",
+      "czConfig": "config/cz-git/cz.config.js"
     }
   }
 }
