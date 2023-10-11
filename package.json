@@ -12,7 +12,7 @@
     "lint:prettier": "prettier --write **/*.{js,json,tsx,css,less,scss,vue,html,md}",
     "lint:stylelint": "stylelint --ignore-path ./config/stylelint/.stylelintignore --config ./config/stylelint/.stylelint.config.js {src}**/*.{css,less,scss,vue,html} --fix",
     "lint:lint-staged": "lint-staged -c ./config/lint-staged/lint-staged.config.js",
-    "commit": "pnpm install -g commitizen && git add . && pnpm lint:lint-staged && cz",
+    "commit": "git add . && pnpm lint:lint-staged && cz",
     "cz": "git czg",
     "prepare": "husky install"
   },
@@ -36,6 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@vitejs/plugin-vue": "^4.3.1",
     "@vue/tsconfig": "^0.4.0",
+    "commitizen": "^4.3.0",
     "cz-git": "^1.7.1",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
