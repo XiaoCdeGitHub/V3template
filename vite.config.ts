@@ -9,7 +9,6 @@ import Inspect from 'vite-plugin-inspect';
 import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
 import commonjs from '@rollup/plugin-commonjs';
-import { viteMockServe } from 'vite-plugin-mock'
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
@@ -54,11 +53,6 @@ export default defineConfig({
       autoInstall: true,
     }),
     Inspect(),
-    viteMockServe({
-      mockPath: "./src/mock/source", // 解析刚刚user.ts的位置
-      localEnabled: true // 是否开启开发环境
-    })
-
   ],
   resolve: {
     alias: {
@@ -70,13 +64,4 @@ export default defineConfig({
       plugins: [commonjs()],
     },
   },
-  css: {
-    // css预处理器
-    preprocessorOptions: {
-      less: {
-        charset: false,
-        additionalData: '@import "src/themes/themes.less";',
-      },
-    },
-  }
 });

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Admin from '../views/Admin/Admin.vue';
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -16,12 +16,7 @@ const router = createRouter({
           redirect: '/Login',
         },
       ],
-    }, {
-      path: '/admin',
-      name:'Admin',
-      component: Admin
-    }
-
+    },
   ],
 });
 router.beforeEach((to, from, next) => {

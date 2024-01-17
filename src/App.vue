@@ -1,12 +1,11 @@
 <template>
   <div id="app">
+    hello111111111
     <router-view />
   </div>
 </template>
 <script lang="ts" setup></script>
 <style>
-@import url('./themes/default.css');
-
 html {
   /* overflow: auto; */
 }
